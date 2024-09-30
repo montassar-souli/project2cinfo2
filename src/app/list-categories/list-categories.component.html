@@ -5,6 +5,7 @@
 <input (change)="onChangeInput($event)" />
 Search : <input name="search" [(ngModel)]="searchText" /> Value :
 {{ searchText }}
+<button (click)="searchCategory()">Search</button>
 <table class="table">
   <tr>
     <th>Id</th>
@@ -12,7 +13,7 @@ Search : <input name="search" [(ngModel)]="searchText" /> Value :
     <th>Available</th>
     <th>Image</th>
   </tr>
-  <tr *ngFor="let element of categories">
+  <tr *ngFor="let element of listCategoryFiltred">
     <td>{{ element.id }}</td>
     <td>{{ element.name }}</td>
     <td *ngIf="element.available == false">Catégorie non diponible</td>

@@ -44,4 +44,14 @@ export class ListCategoriesComponent {
   onChangeInput(event: Event) {
     alert((event.target as HTMLInputElement).value);
   }
+
+  listCategoryFiltred: Category[] = this.categories;
+  searchCategory() {
+    this.listCategoryFiltred = [];
+    this.categories.forEach((element) => {
+      if (element.name.includes(this.searchText)) {
+        this.listCategoryFiltred.push(element);
+      }
+    });
+  }
 }
