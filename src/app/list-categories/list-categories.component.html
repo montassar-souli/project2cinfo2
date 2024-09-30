@@ -1,0 +1,22 @@
+<h1>{{ title }}</h1>
+{{ category.id }}<br />
+{{ category.name }}
+
+<input (change)="onChangeInput($event)" />
+<table class="table">
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Available</th>
+    <th>Image</th>
+  </tr>
+  <tr *ngFor="let element of categories">
+    <td>{{ element.id }}</td>
+    <td>{{ element.name }}</td>
+    <td *ngIf="element.available == false">Catégorie non diponible</td>
+    <td *ngIf="element.available == true">
+      <button (click)="afficher(element.name)">Afficher Produits</button>
+    </td>
+    <td><img [src]="element.image" height="100" width="100" /></td>
+  </tr>
+</table>
