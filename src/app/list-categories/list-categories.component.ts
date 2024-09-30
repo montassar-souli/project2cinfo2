@@ -7,6 +7,8 @@ import { Category } from '../models/category';
   styleUrls: ['./list-categories.component.css'],
 })
 export class ListCategoriesComponent {
+  //two-way DataBinding
+  searchText: string = '';
   title: string = 'List des Categories';
   category: Category = {
     id: 1,

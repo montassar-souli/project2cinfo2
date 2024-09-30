@@ -3,6 +3,8 @@
 {{ category.name }}
 
 <input (change)="onChangeInput($event)" />
+Search : <input name="search" [(ngModel)]="searchText" /> Value :
+{{ searchText }}
 <table class="table">
   <tr>
     <th>Id</th>
