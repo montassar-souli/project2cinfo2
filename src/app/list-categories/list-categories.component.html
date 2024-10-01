@@ -7,7 +7,7 @@ Search : <input name="search" [(ngModel)]="searchText" /> Value:{{ searchText }}
 <button class="btn btn-outline-primary" (click)="searchCategory()">
   Search
 </button>
-<table class="table">
+<table class="table table-bordered">
   <tr>
     <th>Id</th>
     <th>Name</th>
@@ -19,7 +19,9 @@ Search : <input name="search" [(ngModel)]="searchText" /> Value:{{ searchText }}
     <td>{{ element.name }}</td>
     <td *ngIf="element.available == false">Catégorie non diponible</td>
     <td *ngIf="element.available == true">
-      <button (click)="afficher(element.name)">Afficher Produits</button>
+      <button [routerLink]="['/products/', element.id]">
+        Afficher Produits
+      </button>
     </td>
     <td><img [src]="element.image" height="100" width="100" /></td>
   </tr>
