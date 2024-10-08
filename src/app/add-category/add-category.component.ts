@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-add-category',
@@ -8,11 +8,20 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class AddCategoryComponent {
   //create input
+  //name: nom d'input
   name: FormControl = new FormControl();
   //create form
   category: FormGroup = new FormGroup({
-    name: new FormControl(),
+    name: new FormControl('', [Validators.required, Validators.minLength(3)]),
     available: new FormControl(),
     image: new FormControl(),
+    adresse: new FormGroup({
+      street: new FormControl(),
+      city: new FormControl(),
+    }),
   });
+
+  submit() {
+    console.log(this.category.get('name'));
+  }
 }
