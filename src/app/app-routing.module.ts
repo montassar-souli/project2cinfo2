@@ -5,6 +5,7 @@ import { ListCategoriesComponent } from './list-categories/list-categories.compo
 import { ProductsComponent } from './products/products.component';
 import { ProfileComponent } from './profile/profile.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { AddCategoryComponent } from './add-category/add-category.component';
 
 const routes: Routes = [
   {
@@ -17,7 +18,7 @@ const routes: Routes = [
     pathMatch: 'full',
   },
   {
-    path: 'listCategotird',
+    path: 'listCategotie',
     component: ListCategoriesComponent,
   },
   {
@@ -27,6 +28,10 @@ const routes: Routes = [
   {
     path: 'profile',
     component: ProfileComponent,
+  },
+  {
+    path: 'category/add',
+    component: AddCategoryComponent,
   },
   {
     path: '**',

@@ -10,8 +10,9 @@ import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { ListCategoriesComponent } from './list-categories/list-categories.component';
 import { ProductsComponent } from './products/products.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { AddCategoryComponent } from './add-category/add-category.component';
 
 @NgModule({
   declarations: [
@@ -23,8 +24,15 @@ import { NotFoundComponent } from './not-found/not-found.component';
     ListCategoriesComponent,
     ProductsComponent,
     NotFoundComponent,
+    AddCategoryComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, NavbarComponent, FormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    NavbarComponent,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

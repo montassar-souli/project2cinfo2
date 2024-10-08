@@ -1,0 +1,10 @@
+<input [formControl]="name" /> Value : {{ name.value }}
+<br />
+{{ name | json }}
+
+<form [formGroup]="category">
+  <input formControlName="name" />
+  <input formControlName="available" />
+  <input formControlName="image" />
+  <input type="submit" value="Add category" />
+</form>

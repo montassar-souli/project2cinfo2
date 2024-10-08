@@ -9,6 +9,7 @@ import { Product } from '../models/product';
 })
 export class ProductsComponent {
   //activated = new ActivatedRoute(); ==> probléme Couplage fort
+  id!: number;
 
   listProducts: Product[] = [
     {
@@ -18,6 +19,7 @@ export class ProductsComponent {
       image: 'assets/images/phone.jpeg',
       categoryId: 1,
     },
+
     {
       id: 2,
       name: 'tv',
@@ -27,15 +29,26 @@ export class ProductsComponent {
     },
     {
       id: 3,
-      name: 'iphone',
+      name: 'tv samsung',
       price: 1000,
       image: 'assets/images/phone.jpeg',
-      categoryId: 1,
+      categoryId: 2,
+    },
+    {
+      id: 4,
+      name: 'iphone',
+      price: 2000,
+      image: 'assets/images/phone.jpeg',
+      categoryId: 2,
     },
   ];
 
   // Injection de dépendance (patron de conception)
   constructor(private activated: ActivatedRoute) {
+    this.id = this.activated.snapshot.params['id'];
+    this.listProducts = this.listProducts.filter(
+      (p) => p.categoryId == this.id
+    );
     console.log(this.activated.snapshot.params);
   }
 }
