@@ -6,6 +6,7 @@ import { ProductsComponent } from './products/products.component';
 import { ProfileComponent } from './profile/profile.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { AddCategoryComponent } from './add-category/add-category.component';
+import { AddProductComponent } from './add-product/add-product.component';
 
 const routes: Routes = [
   {
@@ -32,6 +33,10 @@ const routes: Routes = [
   {
     path: 'category/add',
     component: AddCategoryComponent,
+  },
+  {
+    path: 'product/add',
+    component: AddProductComponent,
   },
   {
     path: '**',

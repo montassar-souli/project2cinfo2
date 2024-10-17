@@ -12,7 +12,7 @@ export class AddCategoryComponent {
   name: FormControl = new FormControl();
   //create form
   category: FormGroup = new FormGroup({
-    name: new FormControl('', [Validators.required, Validators.minLength(3)]),
+    name: new FormControl("",[Validators.required, Validators.minLength(3),Validators.nullValidator]),
     available: new FormControl(),
     image: new FormControl(),
     adresse: new FormGroup({
