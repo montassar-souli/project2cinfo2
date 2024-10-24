@@ -3,7 +3,9 @@
 {{ category.name }}
 
 <input (change)="onChangeInput($event)" />
+<br />
 Search : <input name="search" [(ngModel)]="searchText" /> Value:{{ searchText }}
+
 <button class="btn btn-outline-primary" (click)="searchCategory()">
   Search
 </button>
