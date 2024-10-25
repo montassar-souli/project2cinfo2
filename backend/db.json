@@ -1,0 +1,40 @@
+{
+  "product": [
+    {
+      "id": 1,
+      "name": "iphone",
+      "price": 1000,
+      "image": "assets/images/phone.jpeg",
+      "categoryId": 1
+    },
+    {
+      "id": 2,
+      "name": "tv",
+      "price": 3000,
+      "image": "assets/images/phone.jpeg",
+      "categoryId": 2
+    },
+    {
+      "id": 3,
+      "name": "tv samsung",
+      "price": 1000,
+      "image": "assets/images/phone.jpeg",
+      "categoryId": 2
+    },
+    {
+      "id": 4,
+      "name": "iphone",
+      "price": 2000,
+      "image": "assets/images/phone.jpeg",
+      "categoryId": 2
+    },
+    {
+      "id": 10,
+      "name": "test",
+      "price": 0,
+      "image": "assets/images/test.jpeg",
+      "categoryId": 0
+    }
+  ],
+  "category": []
+}
