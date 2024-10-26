@@ -12,7 +12,7 @@ export class ProductService {
     return this.http.get('http://localhost:3000/products');
   }
   addProduct(product:Product){
-    return this.http.post(`http://localhost:3000/products/${product.id}`,product);
+    return this.http.post("http://localhost:3000/products/",product);
   }
   updateProduct(product:Product){
     return this.http.put(`http://localhost:3000/products/${product.id}`,product);
